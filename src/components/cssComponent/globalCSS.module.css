@@ -1,0 +1,164 @@
+/* Variables globales */
+:root{
+    --textLight:#EEF1EF;
+    --textLight-on: #DDE3DF;
+    --textDark: #333333;
+    --textMedium: #3F5766;
+    --textMedium-on:#ADBAC2;
+    --primary: #FFB20F;
+    --primary-on: #FFD885;
+}
+
+/* CSS Metodología BEM */
+/********************************************
+**  PARA SABER MAS DE LA METODOLOGÍA BEM   **
+**           EN CSS, CONSUTAR:             **
+**          https://getbem.com             **
+********************************************/
+
+/* 
+Debido a que gatsby elimina los guiones medios, la sintaxis para usar la metodología BEM en el presente proyecto, se usara de la siguiente forma:
+
+Block -> .block
+Element -> .block__element
+Modiffier -> .block_m_modiffier o .block__element_m_modifier 
+*/
+
+/* Extra small devices (phones, 300px and down) */
+ @media only screen and (max-width: 300px) {
+    /* Reusables */
+
+        /***Iconos***/
+    .icon{
+        font-size: 1.25rem;
+    }
+
+    .icon_m_phoneMenu{
+        font-size: 1.25rem;
+    }
+
+    .icon_m_promoBar{
+        display: none;
+    }
+
+        /***Botones***/
+    .m3dButton{
+        font-size: 0.75rem;
+    }
+
+        /***Links***/
+    .link_m_linkNavMenu{
+        text-decoration: solid;
+        margin-bottom: 0.25em;
+        border-bottom: 1px solid var(--textMedium);
+    }
+
+    /* Navbar */
+    .mainNavbar{
+        display: grid;
+        grid-template-columns: auto auto auto;
+        gap: 1em;
+    }
+    .mainNavbar > .link{
+        grid-column: 1/span 2;
+    }
+    .phoneMenu{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--primary);
+        border: none;
+        border-radius: 50%;
+        width: 1.9rem;
+        height: 1.9rem;
+    }
+    .phoneMenu:hover{
+        cursor: pointer;
+        background-color: var(--primary-on);
+    }
+    .navMenu{
+        grid-column: 1/span 3;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+    .promoBar{
+        font-size: 0.8rem;
+    }
+ }
+
+ /* Extra small devices (phones, 600px and up) */
+@media only screen and (min-width: 300px) {
+
+/* Navbar */
+.promoBar>.icon{
+display: block;   
+}
+}
+
+ /* Small devices (portrait tablets and large phones, 600px and up) */
+ /* @media only screen and (min-width: 600px) {...} */
+ 
+ /* Medium devices (landscape tablets, 768px and up) */
+ /* @media only screen and (min-width: 768px) {...} */
+ 
+ /* Large devices (laptops/desktops, 992px and up) */
+ /* @media only screen and (min-width: 992px) {...} */
+ 
+ /* Extra large devices (large laptops and desktops, 1200px and up) */
+ /* @media only screen and (min-width: 1200px) {...} */
+
+
+/* Reusables */
+
+    /***Logo***/
+.logo{
+    min-width: 9em;
+    display: flex;
+    align-items: center;
+}
+
+    /***Links***/
+.link{
+    text-decoration: none;
+    color: var(--textDark);
+}
+
+.mainNavbar{
+    padding: 0.8em;
+    display: grid;
+    align-items: center;
+    flex-grow: 0;
+    min-height: 30px;
+    background-color: var(--textLight);
+    color: var(--textDark);
+}
+
+.promoBar{
+    padding: 0.8em;
+    font-weight: bold;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--textDark);
+    color: var(--textLight);
+}
+
+.m3dButton{
+    padding: 0.6em;
+    font-weight: bold;
+    background-color: var(--primary);
+    border: none;
+    color: var(--textDark);
+    border-radius: 0.6em;
+}
+
+.m3dButton:hover{
+    background-color: var(--primary-on);
+}
+
+.navMenu>a:hover{
+    background-color: var(--textLight-on);
+    transition: background-color 0.22s linear;
+}

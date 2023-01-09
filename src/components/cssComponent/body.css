@@ -1,0 +1,26 @@
+/*La presente hoja de estilos aplicará estilos globales a las etiquetas html*/
+
+link:hover,
+a:hover
+{
+    text-decoration: none;
+}
+
+link:hover,
+a:hover,
+button:hover{
+    cursor: pointer;
+}
+
+html {
+    box-sizing: border-box;
+}
+    
+body {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+}
