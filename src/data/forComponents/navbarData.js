@@ -1,4 +1,4 @@
-const navLinks =[
+export const navLinks =[
     {tittle:"Inicio", route:"/"},
     {tittle:"Nosotros", route:"/nosotros"},
     {tittle:"Servicios", route:"/servicios"},
@@ -6,4 +6,3 @@ const navLinks =[
     {tittle:"Contacto", route:"/contacto"}
 ]
 
-export default navLinks

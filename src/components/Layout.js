@@ -5,6 +5,9 @@ import Header from './Header'
 import Navbar from './Navbar'
 import Footer from './Footer'
 
+//CSS
+import './cssComponent/body.css'
+
 const Layout = ( props ) => {
   return (
     <>
