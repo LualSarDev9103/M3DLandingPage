@@ -7,6 +7,10 @@
     --textMedium-on:#ADBAC2;
     --primary: #FFB20F;
     --primary-on: #FFD885;
+    --green: #21a179;
+    --green-on: #48a9a6;
+    --blue: #005Bea;
+    --blue-on: #00C6FB;
 }
 
 /* CSS Metodología BEM */
@@ -26,7 +30,18 @@ Modiffier -> .block_m_modiffier o .block__element_m_modifier
 
 /* Extra small devices (phones, 300px and down) */
  @media only screen and (max-width: 300px) {
+    body{
+        font-size: 0.8rem;
+    }
+
     /* Reusables */
+
+        /***Contenedor de imagenes***/
+    .imgContainer{
+        text-align: center;
+        margin: auto;
+        max-width: 80%;
+    }
 
         /***Iconos***/
     .icon{
@@ -48,13 +63,21 @@ Modiffier -> .block_m_modiffier o .block__element_m_modifier
 
         /***Links***/
     .link_m_linkNavMenu{
-        text-decoration: solid;
+        /* display: none; */
+        color: var(--textDark);
+        text-decoration: none;
         margin-bottom: 0.25em;
         border-bottom: 1px solid var(--textMedium);
     }
 
+        /***Card***/
+    .card{
+        margin: -0.8em;
+    }
+
     /* Navbar */
     .mainNavbar{
+        padding: 0.8em;
         display: grid;
         grid-template-columns: auto auto auto;
         gap: 1em;
@@ -85,15 +108,33 @@ Modiffier -> .block_m_modiffier o .block__element_m_modifier
     .promoBar{
         font-size: 0.8rem;
     }
- }
 
- /* Extra small devices (phones, 600px and up) */
-@media only screen and (min-width: 300px) {
+    /* Header */
+    .header{
+        padding: 1.3rem;
+    }
 
-/* Navbar */
-.promoBar>.icon{
-display: block;   
+    /* Services */
+    .vistaServicios{
+        display: flex;
+
+    }
 }
+
+/* Extra small devices (phones, 600px and up) */
+@media only screen and (min-width: 300px) {
+    
+    /* Reusables */
+
+        /***Card***/
+    .card{
+        margin: -0.8em;
+    }
+
+    /* Navbar */
+    .promoBar>.icon{
+        display: block;   
+    } 
 }
 
  /* Small devices (portrait tablets and large phones, 600px and up) */
@@ -111,6 +152,64 @@ display: block;
 
 /* Reusables */
 
+    /***Contenedor Flex***/
+
+.contenedorFlex{
+    display: flex;
+}
+
+.contenedorFlex_m_columna{
+    flex-direction: column;
+}
+
+    /***Cards***/
+.card{
+    margin: 3em -0.8em;
+    padding: 0.8em;
+    padding-bottom: 6em;
+}
+
+.card_m_doubleCard{
+    padding: 0.8em;
+    margin: 0.5em 0 -4.5em 0;
+}
+
+.card_m_black{
+    color: var(--textLight);
+    background: radial-gradient(ellipse, var(--textDark) 29%, rgba(0,0,0,0.81) 100%);
+    background-blend-mode: normal;
+    box-shadow: 0px 0px 1px #eef1ef;
+}
+
+.card_m_green{
+    color: var(--textLight);
+    background: linear-gradient(-70deg, var(--green-on) 0%, var(--green) 100%);
+    background-blend-mode: normal;
+    box-shadow: 0px 2px 4px rgba(100,100,100,0.5);
+}
+
+.card_m_rounded{
+    border-radius: 112px 0;
+}
+
+.card_m_roundedInverted{
+    border-radius: 0 112px;
+}
+
+.card__tittle{
+    text-align: left;
+}
+
+.card__tittle_m_creative{
+    text-align: right;
+    font-family: 'Attraction', 'Attraction Personal Use', 'Pacifico', cursive, sans-serif;
+}
+
+.card__textContent{
+    margin: 0.7em;
+    text-align: left;
+}
+
     /***Logo***/
 .logo{
     min-width: 9em;
@@ -120,30 +219,11 @@ display: block;
 
     /***Links***/
 .link{
+    color: inherit;
     text-decoration: none;
-    color: var(--textDark);
 }
 
-.mainNavbar{
-    padding: 0.8em;
-    display: grid;
-    align-items: center;
-    flex-grow: 0;
-    min-height: 30px;
-    background-color: var(--textLight);
-    color: var(--textDark);
-}
-
-.promoBar{
-    padding: 0.8em;
-    font-weight: bold;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    background-color: var(--textDark);
-    color: var(--textLight);
-}
+    /***Button***/
 
 .m3dButton{
     padding: 0.6em;
@@ -158,7 +238,69 @@ display: block;
     background-color: var(--primary-on);
 }
 
+body{
+    background-color: var(--textLight);
+}
+/* Navbar */
+
+.mainNavbar{
+    /* padding: 0.8em; */
+    display: grid;
+    align-items: center;
+    flex-grow: 0;
+    min-height: 30px;
+    background-color: var(--textLight);
+    color: var(--textDark);
+}
+
 .navMenu>a:hover{
     background-color: var(--textLight-on);
     transition: background-color 0.22s linear;
+}
+
+.promoBar{
+    padding: 0.8em;
+    font-weight: bold;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--textDark);
+    color: var(--textLight);
+}
+
+/* Header */
+.header{
+    margin-bottom: 3em; /*Revisar responsive*/
+    background-blend-mode: normal;
+    box-shadow: 0px 2px 4px rgba(100,100,100,0.5);
+    border-radius: 0 0 112px 0;
+    font-weight: bold;
+    color: var(--textLight);
+}
+
+.header_m_green{
+    background: linear-gradient(-70deg, var(--green-on) 0%, var(--green) 100%);
+}
+
+
+/* Home-Index */
+
+/**Seccion Servicios**/
+.lineaServicios{
+    text-align: center;
+    color: var(--textDark);
+    margin: 0.8em; /*Revisar responsive*/
+}
+
+.lineaServicios__titulo{
+    color: var(--textMedium);
+}
+
+.vistaServicios{
+    color: var(--textMedium);
+    font-weight: 600;
+    text-align: center;
+    display: grid;
+    grid-template-columns: auto;
 }

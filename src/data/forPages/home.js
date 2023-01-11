@@ -1,5 +1,6 @@
 export const headerData = {
-    bannerSRC: "",
+    SRC: "../images/bannerHome.jpg",
+    alt:"Impresión 3d",
     tittle: "Descubre la impresión 3d",
     intro: "Plasma tus ideas y dale forma física a tus proyectos, te ayudaremos con el diseño, fabricación y postproducción con tecnologias 4.0."
 }
@@ -25,13 +26,14 @@ export const lineasServicios = {
             {tittle:"Esculpido digital", iconSRC:"/", link:"/"},
             {tittle:"Renderizado", iconSRC:"/", link:"/"},
             {tittle:"Impresión 3D", iconSRC:"/", link:"/"},
-        ]
+        ],
+        button:{ text:"Ver mas", link:"/"}
     },
     industrial: {
         tittle:"Linea Industrial",
         parrafos: [
-            "La línea industrial de Manufact3D es un conjunto de servicios que ayudan a las personas a fabricar prototipos o productos mediante el uso de la ingeniería.",
-            "Con nuestros servicios podrá crear diseños complejos, ahorrando costos, tiempos y materiales de fabricación; logrando productos efectivo, atractivos y sostenibles",
+            "La línea industrial de Manufact3D es un conjunto de servicios que ayudan a las personas a fabricar prototipos o productos mediante el uso de ingeniería.",
+            "Con nuestros servicios podrá crear diseños complejos, ahorrando en costos, tiempos y materiales de fabricación; logrando productos efectivos, atractivos y sostenibles",
             "¡Con nuestra linea industrial tus proyectos son una realidad!"
         ],
         imagenes: [
@@ -47,7 +49,8 @@ export const lineasServicios = {
             {tittle:"Impresión 3D", iconSRC:"/", link:"/"},
             {tittle:"Ingeniería inversa", iconSRC:"/", link:"/"},
             {tittle:"Elementos finitos", iconSRC:"/", link:"/"}
-        ]
+        ],
+        button:{ text:"Ver mas", link:"/"}
     }
 }
 
