@@ -3,7 +3,10 @@
  */
 module.exports = {
   siteMetadata: {
-    title: `manufact-landing-page`,
+    title: `Manufact3D`,
+    description: `Diseño, modelado 3D, fabricación e impresión 3D`,
+    twitterUsername: `@manufact3d`,
+    image: `/gatsby-icon.png`,
     siteUrl: `https://www.yourdomain.tld`
   },
   plugins: ["gatsby-plugin-preload-fonts","gatsby-plugin-google-gtag", "gatsby-plugin-image", "gatsby-plugin-sitemap", {
