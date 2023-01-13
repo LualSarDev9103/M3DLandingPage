@@ -32,6 +32,7 @@ Modiffier -> .block_m_modiffier o .block__element_m_modifier
  @media only screen and (max-width: 300px) {
     body{
         font-size: 0.8rem;
+        text-align: center;
     }
 
     /* Reusables */
@@ -211,8 +212,11 @@ Modiffier -> .block_m_modiffier o .block__element_m_modifier
     text-align: left;
 }
 
-.card__tittle_m_creative{
+.card__tittle_m_inverted{
     text-align: right;
+}
+
+.card__tittle_m_creative{
     font-family: 'Attraction', 'Attraction Personal Use', 'Pacifico', cursive, sans-serif;
 }
 
@@ -291,7 +295,9 @@ body{
 }
 
 .header_m_green{
-    background: linear-gradient(-70deg, var(--green-on) 0%, var(--green) 100%);
+    /* background: linear-gradient(-70deg, var(--green-on) 0%, var(--green) 100%); */
+    background-size: cover;
+    background-image: url(../../images/backgroundHeader.jpg);
 }
 
 /* Footer */
