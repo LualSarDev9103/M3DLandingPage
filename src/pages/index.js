@@ -2,6 +2,9 @@ import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 import * as React from "react"
 
+//SEO
+import {SEO} from "../components/SEO"
+
 //Layout
 import Layout from "../components/Layout"
 
@@ -21,6 +24,7 @@ import {
   card_m_rounded,
   card_m_roundedInverted,
   card__tittle,
+  card__tittle_m_inverted,
   card__tittle_m_creative,
   card__textContent,
   vistaServicios,
@@ -63,7 +67,7 @@ const IndexPage = () => {
             
             <div className={`${card} + ${card_m_black} + ${card_m_rounded}`}>
 
-              <h2 className={card__tittle_m_creative}>{creative.tittle}</h2>
+              <h2 className={`${card__tittle_m_inverted} + ${card__tittle_m_creative}`}>{creative.tittle}</h2>
               <div className={card__textContent}>
                 {creative.parrafos.map((parrafo, index)=>
                   <p key={`pc${index}`}>{parrafo}</p>
@@ -203,4 +207,6 @@ const IndexPage = () => {
 
 export default IndexPage
 
-export const Head = () => <title>Home Page</title>
+export const Head = () => (
+  <SEO />
+)

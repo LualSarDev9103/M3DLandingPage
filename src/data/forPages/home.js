@@ -1,5 +1,5 @@
 export const headerData = {
-    SRC: "../images/bannerHome.jpg",
+    SRC: "../images/homeImages/bannerHome.jpg",
     alt:"Impresión 3d",
     tittle: "Descubre la impresión 3d",
     intro: "Plasma tus ideas y dale forma física a tus proyectos, te ayudaremos con el diseño, fabricación y postproducción con tecnologias 4.0."
