@@ -1,12 +1,11 @@
 /*La presente hoja de estilos aplicará estilos globales a las etiquetas html*/
 
 
-html {
+* {
     box-sizing: border-box;
 }
     
 body {
-    box-sizing: border-box;
     scroll-behavior: smooth;
     overflow-x: hidden;
     font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
@@ -32,4 +31,8 @@ ul{
 
 li{
     margin: 0.6em 0;
+}
+
+image{
+    min-width: 100%;
 }

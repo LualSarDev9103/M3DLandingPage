@@ -1,8 +1,8 @@
 import React from 'react'
 
 //Componentes
-import Navbar from './Navbar'
 import Footer from './Footer'
+import Header from './Header'
 
 //CSS
 import './cssComponent/body.css'
@@ -10,7 +10,7 @@ import './cssComponent/body.css'
 const Layout = ( {children} ) => {
   return (
     <>
-      <Navbar />
+      <Header />
       <main>
         {children}
       </main>
